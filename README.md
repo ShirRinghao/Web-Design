@@ -1,3 +1,2 @@
-# Web-Design
+# SI539 Web-Design, Fall 2023
 
-<h1>Linghao Shi</h1>
