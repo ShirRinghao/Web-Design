@@ -2,8 +2,7 @@
 Make the font larger too.*/
 body{
 	margin:1%;
-	padding:1%;
-	font-size:150%;
+	font-size:125%;
 }
 
 /*Make the h1 heading bigger with a bold font*/
@@ -24,12 +23,13 @@ h1{
 
 /*Style the images*/
 img{
-    height: 175px;
+    height: 150px;
 	width:auto;
     border: 3px solid blue;
     padding: 25px;
     border-radius: 20px;
-    margin: 10px;
+    margin: 5px;
+	margin-left: 10%
 }
 
 /*Make the h2 heading match h1*/
@@ -47,13 +47,13 @@ p, h1, h2 {
 space too*/
 header, nav, main, footer{
 	border: 3px solid red;
-	margin: 20px 0;
+	margin: 10px 0;
 }
 
 
 /*Change the styling for all of the list 
 items in the nav section*/
-nav li{
+nav ul li{
 	background-color: #ECFF4D;
 	padding:10px;
 	width:25%;
