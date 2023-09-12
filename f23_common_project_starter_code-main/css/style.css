@@ -7,9 +7,8 @@ body{
 
 /*Make the h1 heading bigger with a bold font*/
 h2{
-	font-size: 10px; 
+	font-size: 40px; 
 	font-weight: bold;
-	border-width: 10px;
 }
 
 .active{
