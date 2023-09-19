@@ -26,8 +26,7 @@ p{
 }
 
 img{
-    display: flex;
-    justify-content: center;
+    display: block;
     margin: auto;
     width: 250px;
     border: 10px dashed white;
