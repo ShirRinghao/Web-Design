@@ -26,9 +26,10 @@ p{
 }
 
 img{
-    display: block;
+    display: flex;
+    justify-content: center;
     margin: auto;
-    width: 225px;
+    width: 250px;
     border: 10px dashed white;
 }
 
@@ -103,5 +104,5 @@ footer p{
     padding-right: 15px;
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-left: none;
+    padding-left: 0;
 }
