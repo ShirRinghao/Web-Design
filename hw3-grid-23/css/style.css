@@ -230,7 +230,7 @@ Begin on the 2nd, 3rd, 4th and 5th rows respectively.
   /* Step 9: Write the selector/rule property to style the nav element */
   nav {
     text-align: right;
-    padding: 30px, 0px, 30px, 0px; /* cloclwise */
+    padding: 30px 0px;
   }
  
   /* Step 10: Write the selector/rule property to update the .container class */
