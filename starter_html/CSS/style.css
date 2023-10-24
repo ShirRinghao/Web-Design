@@ -1,0 +1,345 @@
+html {
+  scroll-behavior: smooth;
+}  
+
+h2{
+  font-size: 300%;
+  margin: 2% 0% 2% 0%; 
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+}
+
+h3{
+  font-size: 150%;
+  margin: 2% 0% 2% 0%; 
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* Adjusting bullet point spacing for unordered lists */
+ul {
+  list-style-position: inside; /* Makes the bullet points inside the content box */
+  padding-left: 0;             /* Remove default padding */
+}
+
+ul li {
+  margin-left: 1em;            /* Adjust this value to bring bullets closer or further from the text */
+}
+
+/* Adjusting number spacing for ordered lists */
+ol {
+  list-style-position: inside; /* Makes the numbers inside the content box */
+  padding-left: 0;             /* Remove default padding */
+}
+
+ol li {
+  margin-left: 1.5em;          /* Adjust this value to bring numbers closer or further from the text */
+}
+
+
+body{
+  line-height: 150%;
+  background-color: #f4ddb5;
+}
+
+header {
+  text-align: center;
+}
+
+nav {
+  background-color: whitesmoke;
+  margin: auto;
+  position: fixed;
+  width: 100%;
+  font-size: 20px;
+}
+
+nav ul li{
+  display: inline;
+  font-size: 100%;
+  font-weight: bold;
+  padding: 50px 50px 30px 80px;
+  transition: font-size 0.3s;
+}
+
+nav ul li:hover{
+  font-size: 150%;
+}
+
+nav a{
+  text-decoration: none;
+  color: black;
+}
+
+a:visited{
+  color: black;
+}
+
+nav a.current{
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-underline-offset: 15%;
+}
+
+.title-container {
+  display: flex;
+  align-items: flex-end; 
+  justify-content: center;
+  height: 100%;
+  margin-bottom: 50px; 
+  font-size: 40px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  grid-template-rows: auto 150px;
+  row-gap: 50px; 
+  border-radius:25px;
+  justify-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px; 
+  border: 2px solid black;  
+  box-sizing: border-box;
+}
+
+.gallery div.img-container {
+  width: 200px; 
+  height: 200px;
+  border-radius: 100%; 
+  overflow: hidden; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery img {
+  max-width: 100%;
+  max-height: 100%; 
+  object-fit: cover; 
+}
+
+.gallery h2, .likes h2 {
+  grid-column: 1 / -1;  
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.likes ul li{
+  text-align: center;
+}
+
+.skip{
+  background: white;
+  left: 0;
+  padding: 6px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+  position: absolute;
+  top: -60px;
+}
+
+.skip:focus{
+  top: 100px;
+}
+
+*:focus{
+  outline: 2px solid grey;
+}
+.pet img {
+  padding: 10px;
+  margin: 20px;
+  border-radius: 35px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pet {
+  margin: 30px 0;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr; /* Adjusted for wider images */
+  row-gap: 30px;
+  justify-items: center;
+}
+
+.pet p {
+  padding: 15px;
+  font-size: 25px;
+  line-height: 1.5;
+  font-family: 'Arial', sans-serif;
+  border-radius: 35px;
+  grid-column: 3 / -1;
+  grid-row: 3 / span 2;
+  max-height: 250px;
+  background-color: #f6f6f6; /* Light background to distinguish text area */
+  color: black;
+}
+
+.pet h2{
+  grid-column: 1 / -1;
+  text-align: center;
+  grid-row: 1;
+  margin-top: 100px;
+}
+
+.pet img:first-of-type {
+  grid-column: 1 / span 2; /* Keep as it is for left */
+  grid-row: 2 / span 3;
+  height: 650px;
+}
+
+.pet img:nth-of-type(2) {
+  grid-column: 3 / span 2; /* Keep as it is for right */
+  grid-row: 7;
+  width: 100%; /* Increased width */
+}
+
+.pet img:nth-of-type(3) {
+  grid-column: 1 / span 2; /* Keep as it is for left */
+  grid-row: 8;
+  width: 100%; /* Increased width */
+}
+
+.pet img:nth-of-type(4) {
+  grid-column: 3 / span 2; /* Keep as it is for right */
+  grid-row: 9;
+  width: 100%; /* Increased width */
+}
+
+/* travel.html */
+.travel-cover{
+  text-align: center;
+}
+
+.travel-h1{
+  font-size: 500%;
+  color: whitesmoke;
+  margin: 0;
+  text-align: center;
+} 
+
+.travel{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.travel img:nth-of-type(1){
+  grid-column: 1 / span 5;
+  grid-row: 1 / span 3;
+  width: 100%;
+  height: 100%;
+  max-height: 90vh;
+  object-fit: cover;
+}
+
+.travel img:nth-of-type(2){
+  grid-column: 1 / span 5;
+  grid-row: 4 / span 3;
+  width: 100%;
+  height: 100%;
+  max-height: 90vh;
+  object-fit: cover;
+}
+
+.travel h2{
+  grid-column: 1 / -1;
+  grid-row: 1 / span 1;
+  z-index: 1;
+  color: whitesmoke;
+  font-size: 500%;
+  padding: 3vh 0 0 5vw;
+}
+
+.travel h3{
+  grid-column: 1 / 2;
+  grid-row: 3 / span 1;
+  font-weight: bold;
+  color: whitesmoke;
+  font-weight: 100;
+  font-size: 150%;
+  padding: 3vh 0 0 5vw;
+}
+
+/* Main Travel Gallery Container */
+.travel-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: auto 150px;
+  gap: 50px;
+  row-gap: 50px; 
+  padding: 20px; 
+  border: 2px solid black;  
+  box-sizing: border-box;
+  border-radius: 25px;
+  justify-content: center;
+  justify-items: center;
+}
+
+/* Image Container Inside Travel Gallery */
+.travel-gallery div.img-container {
+  width: 200px; 
+  height: 200px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; 
+  border-radius: 100%; 
+}
+
+/* Image Styling Inside Travel Gallery */
+.travel-gallery img {
+  max-width: 100%;
+  max-height: 100%; 
+  object-fit: cover; 
+}
+
+/* Heading Inside Travel Gallery */
+.travel-gallery h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Paragraph Styling Inside Travel */
+.travel p {
+  grid-column: 3 / -1;
+  grid-row: 3 / span 1;
+  color: whitesmoke;
+  background-color: rgba(50, 50, 50, 0.5);
+  padding: 20px;
+  line-height: 1.5;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  padding: 5px;
+}
+  .grid-item {
+  background-color: #f4ddb5;
+  padding: 40px;
+  text-align: center;
+  border: 2px solid #ffffff;
+}
+
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto;
+  }
+
+  .skip a{
+    -webkit-transition: none;
+    transition: none; 
+   }
+
+  header{
+    background-attachment: initial;
+  }
+}
