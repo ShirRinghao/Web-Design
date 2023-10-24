@@ -1,86 +1,343 @@
-html{
+html {
   scroll-behavior: smooth;
-}
-
-body{
-  background-color: #737373;
-  font-size: 18px;
-  line-height: 1.15;
-  margin: 0;
-  padding: 0;
-}
-
-
-.overview{
-  background-attachment: fixed; /* Parallax effect */     
-  background-position: center;  /* Parallax effect */
-  background-repeat: no-repeat; /* Parallax effect */
-  background-size: cover;       /* Parallax effect */
-  color: white;
-  height: 400px;                /* Parallax effect */
-}
-
-
-.overview p{
-  color: white;
-  font-size: 24px;
-  padding: 0 100px;
-  text-align: center;
-}
-
-h1{
-  font-size: 50px;
-  line-height: 1;
-  padding: 50px 0;
-  text-align: center;
-}
+}  
 
 h2{
-  font-size: 32px;
-  line-height: 1.5;
+  font-size: 300%;
+  margin: 2% 0% 2% 0%; 
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
 }
 
-nav li{
-  display:inline;
-  padding-right:20px;
+h3{
+  font-size: 150%;
+  margin: 2% 0% 2% 0%; 
+  line-height: 1.2;
+  text-align: center;
+}
 
+/* Adjusting bullet point spacing for unordered lists */
+ul {
+  list-style-position: inside; /* Makes the bullet points inside the content box */
+  padding-left: 0;             /* Remove default padding */
+}
+
+ul li {
+  margin-left: 1em;            /* Adjust this value to bring bullets closer or further from the text */
+}
+
+/* Adjusting number spacing for ordered lists */
+ol {
+  list-style-position: inside; /* Makes the numbers inside the content box */
+  padding-left: 0;             /* Remove default padding */
+}
+
+ol li {
+  margin-left: 1.5em;          /* Adjust this value to bring numbers closer or further from the text */
+}
+
+
+body{
+  line-height: 150%;
+  background-color: #f4ddb5;
+}
+
+header {
+  text-align: center;
+}
+
+nav {
+  background-color: whitesmoke;
+  margin: auto;
+  position: fixed;
+  width: 100%;
+  font-size: 20px;
+}
+
+nav ul li{
+  display: inline;
+  font-size: 100%;
+  font-weight: bold;
+  padding: 50px 50px 30px 80px;
+  transition: font-size 0.3s;
+}
+
+nav ul li:hover{
+  font-size: 150%;
 }
 
 nav a{
+  text-decoration: none;
   color: black;
-  font-weight: bold;
-  text-decoration: none; 
+}
+
+a:visited{
+  color: black;
+}
+
+nav a.current{
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-underline-offset: 15%;
+}
+
+.title-container {
+  display: flex;
+  align-items: flex-end; 
+  justify-content: center;
+  height: 100%;
+  margin-bottom: 50px; 
+  font-size: 40px;
 }
 
 
-.skip a{
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 150px);
+  grid-template-rows: auto 150px;
+  row-gap: 50px; 
+  border-radius:25px;
+  justify-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px; 
+  border: 2px solid black;  
+  box-sizing: border-box;
+}
+
+.gallery div.img-container {
+  width: 200px; 
+  height: 200px;
+  border-radius: 100%; 
+  overflow: hidden; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery img {
+  max-width: 100%;
+  max-height: 100%; 
+  object-fit: cover; 
+}
+
+.gallery h2, .likes h2 {
+  grid-column: 1 / -1;  
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.likes ul li{
+  text-align: center;
+}
+
+.skip{
   background: white;
   left: 0;
   padding: 6px;
   -webkit-transition: top 1s ease-out;
   transition: top 1s ease-out;
   z-index: 1;
+  position: absolute;
+  top: -60px;
 }
 
-
-nav{
-  background-color: #ddd;
-  padding: 25px 0; 
-  text-align: left;
+.skip:focus{
+  top: 100px;
 }
 
-footer{
-  background-color: black;
-  color: white;
-  padding-top: 30px;
+*:focus{
+  outline: 2px solid grey;
+}
+.pet img {
+  padding: 10px;
+  margin: 20px;
+  border-radius: 35px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pet {
+  margin: 30px 0;
+  display: grid;
+  grid-template-columns: 2fr 2fr 1fr 1fr; /* Adjusted for wider images */
+  row-gap: 30px;
+  justify-items: center;
+}
+
+.pet p {
+  padding: 15px;
+  font-size: 25px;
+  line-height: 1.5;
+  font-family: 'Arial', sans-serif;
+  border-radius: 35px;
+  grid-column: 3 / -1;
+  grid-row: 3 / span 2;
+  max-height: 250px;
+  background-color: #f6f6f6; /* Light background to distinguish text area */
+  color: black;
+}
+
+.pet h2{
+  grid-column: 1 / -1;
+  text-align: center;
+  grid-row: 1;
+  margin-top: 100px;
+}
+
+.pet img:first-of-type {
+  grid-column: 1 / span 2; /* Keep as it is for left */
+  grid-row: 2 / span 3;
+  height: 650px;
+}
+
+.pet img:nth-of-type(2) {
+  grid-column: 3 / span 2; /* Keep as it is for right */
+  grid-row: 7;
+  width: 100%; /* Increased width */
+}
+
+.pet img:nth-of-type(3) {
+  grid-column: 1 / span 2; /* Keep as it is for left */
+  grid-row: 8;
+  width: 100%; /* Increased width */
+}
+
+.pet img:nth-of-type(4) {
+  grid-column: 3 / span 2; /* Keep as it is for right */
+  grid-row: 9;
+  width: 100%; /* Increased width */
+}
+
+/* travel.html */
+.travel-cover{
   text-align: center;
 }
 
+.travel-h1{
+  font-size: 500%;
+  color: whitesmoke;
+  margin: 0;
+  text-align: center;
+} 
 
-.text-block{
-  background-color: rgba(255, 255, 255, .8);
-  border: 10px solid black;
-  padding: 30px;
+.single-travel-div{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.single-travel-div img:nth-of-type(1){
+  grid-column: 1 / span 5;
+  grid-row: 1 / span 3;
+  width: 100%;
+  height: 100%;
+  max-height: 90vh;
+  object-fit: cover;
+}
+
+.single-travel-div img:nth-of-type(2){
+  grid-column: 1 / span 5;
+  grid-row: 4 / span 3;
+  width: 100%;
+  height: 100%;
+  max-height: 90vh;
+  object-fit: cover;
+}
+
+.single-travel-div h2{
+  grid-column: 1 / -1;
+  grid-row: 1 / span 1;
+  z-index: 1;
+  color: whitesmoke;
+  font-size: 500%;
+  padding: 3vh 0 0 5vw;
+}
+
+.single-travel-div h3{
+  grid-column: 1 / 2;
+  grid-row: 3 / span 1;
+  font-weight: bold;
+  color: whitesmoke;
+  font-weight: 100;
+  font-size: 150%;
+  padding: 3vh 0 0 5vw;
+}
+
+.single-travel-div p{
+  grid-column: 3 / -1;
+  grid-row: 3 / span 1;
+  color: whitesmoke;
+  background-color: rgba(50, 50, 50, 0.5);
+  padding: 20px 20px 20px 20px;
+  line-height: 1.5;
+}
+
+.travel-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: auto 150px;
+  row-gap: 50px; 
+  border-radius:25px;
+  justify-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px; 
+  border: 2px solid black;  
+  box-sizing: border-box;
+}
+
+
+.travel-gallery div.img-container {
+  width: 200px; 
+  height: 200px;
+  border-radius: 100%; 
+  overflow: hidden; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.travel-gallery img {
+  max-width: 100%;
+  max-height: 100%; 
+  object-fit: cover; 
+}
+
+.travel-gallery h2 {
+  grid-column: 1 / -1;  
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* recipes.html */
+
+
+
+/* .recipes-cover{
+  position: relative;
+  text-align: center;
+} */
+
+/* .single-recipes-div:hover, .recipes-cover:hover, .single-recipes-div img:hover, #recipes-main img:hover{
+  transform: translateY(0px);
+  transition: none;
+} */
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  padding: 5px;
+}
+  .grid-item {
+  background-color: #f4ddb5;
+  padding: 40px;
+  text-align: center;
+  border: 2px solid #ffffff;
 }
 
 
@@ -97,160 +354,5 @@ footer{
   /*Turn off parallax*/
   header{
     background-attachment: initial;
-  }
-}
-
-
-/*Your Code Here*/
-/* PLEASE DO NOT REMOVE MY COMMENTS.  THEY HELP US HELP YOU DEBUG. */
-
-/* Step 1: Write selector/rule property to add an underline when
-links in the navigation are in the hover or focus state.*/
-nav a:hover, nav a:focus {
-  text-decoration: underline;
-}
-
-
-/* Step 2a: Write selector/rule property to position the default position for the skip class element*/
-.skip a{
-  position: absolute;
-  top: -40px;
-}
-
-/* Step 2b: Write selector/rule property to position the skip class element when it is in focus*/
-.skip a:focus {
-  top: 20px;
-  visibility: visible;
-}
-
-/* Step 3: Write selector/rule property to style all elements when in focus*/
-*:focus {
-  outline: 2px solid #000;
-}
-
-
-/* Step 4: Write selector/rule property to style the container */
-.container {
-  display: grid;
-  grid-template-columns: 1fr 5fr 1fr;
-  grid-gap: 15px;
-}
-
-/* Step 5: Write selector/rule property to add the background image to the 
-first div in the grid and place it in the grid. */
-
-.container>:first-child{
-  grid-column: 1/-1;
-  background-image: url('../images/header.jpg');
-  background-size: cover;
-  background-attachment: fixed;
-  /* Check if this is done: Use the header.jpg file as a non-repeating background image with parallax effect */
-}
-
-
-/* Steps 6 and 7: Write the selector/rule properties to add place the next elements in the next
- four rows in the grid. */
-
-      /*This will be a lot of rules.... but be strategic and combine seletors*/
-
-/* 
-The classes .about, .method, .clients, and .contact:
-Begin in 2nd column and span one column
-Begin on the 2nd, 3rd, 4th and 5th rows respectively.
-
-*/
-
-.about, .method, .clients, .contact {
-  grid-column-start: 2;
-  grid-column-end: span 1;
-}
-
-.about {
-  grid-row: 2 / 3;
-}
-
-.method {
-  grid-row: 3 / 4;
-}
-
-.clients {
-  grid-row: 4 / 5;
-}
-
-.contact {
-  grid-row: 5 / 6;
-}
-
-.about-image, .method-image, .clients-image, .contact-image {
-  grid-column-start: 1;
-  grid-column-end: span all;
-  max-height: 600px;
-  overflow: hidden; /* Hide any content outside the grid cell */
-}
-
-.about-image{
-  grid-row-start: 2; /* Start on the 2nd row */
-}
-
-.method-image {
-  grid-row-start: 3; /* Start on the 3rd row */
-}
-
-.clients-image {
-  grid-row-start: 4; /* Start on the 4th row */
-}
-
-.contact-image {
-  grid-row-start: 5; /* Start on the 5th row */
-}
-
- /* Step 8: Write the selector/rule property to style the .text-block class. */
- .text-block {
-  text-align: center; /* Center the text horizontally */
-  align-items: center; /* Center the content vertically */
-  margin: auto;
-}
-
-/* Add your media query here */
-@media screen and (min-width: 800px){
-  html{
-      scroll-behavior: auto; /* Removes scroll animation */
-  }
-
-  .skip a{
-    -webkit-transition: none; /* sets to default setting */
-    transition: none;        /* sets to default setting */
-   }
-
-  /*Turn off parallax*/
-  header{
-    background-attachment: initial;
-  }
-
-  /* Step 9: Write the selector/rule property to style the nav element */
-  nav {
-    text-align: right;
-    padding: 30px 0px;
-  }
- 
-  /* Step 10: Write the selector/rule property to update the .container class */
-  .container{
-    display: grid;
-    grid-template-columns: 50px auto 500px auto 50px;
-  }
-
-  /* Steps 11 and 12: Update the grid-column property of the grid's children (where-needed)*/
-  .about, .clients, .method-image, .contact-image {
-    grid-column: 3 / span 2;
-  }
-
-  .method, .contact, .about-image, .clients-image {
-    grid-column: 2 / span 2;
-  }
-
-  /* Step 13:Write the selector/rule property to update the .text-block class */
-  .text-block{
-    max-height: 250px;
-    overflow: auto;
   }
 }
