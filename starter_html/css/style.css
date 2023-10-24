@@ -153,6 +153,10 @@ nav a.current{
   background-color: #f4ddb5;
 }
 
+#travel-main{
+  background-color: brown;
+}
+
 .pet img {
   padding: 10px;
   margin: 20px;
