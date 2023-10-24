@@ -40,7 +40,6 @@ ol li {
 
 body{
   line-height: 150%;
-  background-color: #f4ddb5;
 }
 
 header {
@@ -149,6 +148,11 @@ nav a.current{
 *:focus{
   outline: 2px solid grey;
 }
+
+#pets-main{
+  background-color: #f4ddb5;
+}
+
 .pet img {
   padding: 10px;
   margin: 20px;
