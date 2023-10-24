@@ -217,7 +217,7 @@ nav a.current{
 
 .travel-h1{
   font-size: 500%;
-  color: whitesmoke;
+  color: white;
   margin: 0;
   text-align: center;
 } 
@@ -249,7 +249,7 @@ nav a.current{
   grid-column: 1 / -1;
   grid-row: 1 / span 1;
   z-index: 1;
-  color: whitesmoke;
+  color: white;
   font-size: 500%;
   padding: 3vh 0 0 5vw;
 }
@@ -258,7 +258,7 @@ nav a.current{
   grid-column: 1 / 2;
   grid-row: 3 / span 1;
   font-weight: bold;
-  color: whitesmoke;
+  color: white;
   font-weight: 100;
   font-size: 150%;
   padding: 3vh 0 0 5vw;
