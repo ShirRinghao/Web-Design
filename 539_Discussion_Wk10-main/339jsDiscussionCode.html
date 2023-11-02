@@ -21,14 +21,13 @@
 
 		
 		// 1. Change the h1 element to your name.
-		let head1tag = document.querySelector("h1");
-		head1tag.textContent = "Linghao Shi";
+		document.querySelector("h1").innerHTML = "Linghao Shi";
 
 
 		// 2. Update the three span elements using ONLY JavaScript
-		document.getElementById("URL").textContent = window.location.href;
-      	document.getElementById("items").textContent = document.querySelector("ul").children.length + document.querySelector("ol").children.length ;
-      	document.getElementById("time").textContent = new Date();
+		document.getElementById("URL").innerHTML = window.location.href;
+      	document.getElementById("items").innerHTML = document.querySelectorAll("li").length;
+		document.getElementById("time").innerHTML = new Date();
 
 
 		// 3. Change the background color and margin for the entire page.
