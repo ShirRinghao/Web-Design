@@ -1,3 +1,4 @@
+/* Animation keyframes for the logo, increasing size and opacity from initial state to final state */
 @keyframes logo {
     from {
       width: 25px;
@@ -8,33 +9,38 @@
       opacity: 1;
     }
 }
-  
+
+/* Applies the 'logo' animation to the element with id 'logo', running for 5 seconds once */
 #logo{
     animation: logo 5s 1;
 }
 
+/* Sets the default font and background for the body of the website, with a fallback background color */
 body {
     font-family: 'Poppins', serif;
     background-image: url("../images/concrete_seamless.png");
     background-color: #f1f1f1;
 }
 
+/* Styles for the header element, centering content using flexbox */
 header{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Sets the layout for navigation links to be in a column */
 .nav_links{
     display: flex;
     flex-direction: column;
 }
 
+/* Keep visited anchor tags in blue*/
 a.visited{
     color: #0000EE;
 }
 
-
+/* Styles for headers inside card elements with specific background and border settings */
 .card > header {
     background: #288088;
     border: 2px solid #45ADAD;
@@ -44,6 +50,7 @@ a.visited{
     border-top-right-radius: 50px;
   }
 
+/* Base styles for card elements, setting display and border radius */
 .card {
     display: flex;
     flex-direction: column;
@@ -51,6 +58,7 @@ a.visited{
     border-radius: 50px 50px 0 0;
 }
 
+/* Styles for the pricing section, with a flex layout for wrapping and center alignment */
 .pricing {
     display: flex;
     flex-direction: row;
@@ -59,18 +67,21 @@ a.visited{
     align-items: center;
 }
 
+/* Styles for images inside the gallery, setting border color, margin, and width */
 .gallery img{
     border-color: #50C7C7;
     margin: 10px;
     width: 300px;
 }
 
+/* Sets up the gallery with wrapping and centered content */
 .gallery{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+/* Media query for screens wider than 900px, adjusting layout of header and navigation links to be in a row */
 @media screen and (min-width: 900px) {
     header, .nav_links {
         display: flex;
@@ -82,6 +93,7 @@ a.visited{
         flex-basis: 275px;
     }
 
+    /* Fixes the position of the main header at the top of the page */
     body > header{
         position: fixed;
         top: 0;
@@ -89,44 +101,57 @@ a.visited{
         z-index: 1000;
     }
 
+    /* Adds a margin to the top of the main content to avoid overlapping with the fixed header */
     main{
         margin-top: 100px;
     }
 }
 
+/* Disables animations for users who have set the 'reduce motion' preference */
 @media screen and (prefers-reduced-motion: reduce){
     #logo{
         animation: none;
     }
 }
 
+/* Styles specific for print media, changes font, hides background images, and adjusts layout for printing */
 @media print{
     body {
         font-family: Arial, Helvetica;
         background-image: none;
     }
 
+    /* Adjusts the navigation bar and link group to take the full width and distribute space evenly between links in a row */
     nav, .nav_links{
         width: 100%;
         flex-direction: row;
         justify-content: space-around;
     }
 
+    /* Changes the pricing section to a single row layout without wrapping and aligns items to the bottom */
     .pricing{
         flex-wrap: nowrap;
         align-items: flex-end;
     }
 
+    /* Adds a solid border to cards and sets their base width for printing */
     .card{
         border: 2px solid #45ADDD;
         flex-basis: 325px;
     }
 
+    /* Hides the gallery section for printed documents */
     #gallery, .gallery{
         display: none;
     }
 
+    /* Adds a thumbs up character after the second list item in the main content */
     main li:nth-child(2):after {
         content: ' \1F44D';
+    }
+
+    footer {
+        break-before: page; /* This will force the footer to move to the beginning of the next page */
+        page-break-inside: avoid; /* Avoids breaking the content inside the footer across pages */
     }
 }
