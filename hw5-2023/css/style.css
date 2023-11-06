@@ -1,0 +1,132 @@
+@keyframes logo {
+    from {
+      width: 25px;
+      opacity: 0;
+    }
+    to {
+      width: 475px;
+      opacity: 1;
+    }
+}
+  
+#logo{
+    animation: logo 5s 1;
+}
+
+body {
+    font-family: 'Poppins', serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav_links{
+    display: flex;
+    flex-direction: column;
+}
+
+a.visited{
+    color: #0000EE;
+}
+
+
+.card > header {
+    background: #288088;
+    border: 2px solid #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 450px;
+    border-radius: 50px 50px 0 0;
+}
+
+.pricing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery img{
+    border-color: #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width: 900px) {
+    header, .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .pricing, .card {
+        flex-basis: 275px;
+    }
+
+    body > header{
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    main{
+        margin-top: 100px;
+    }
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+    #logo{
+        animation: none;
+    }
+}
+
+@media print{
+    body {
+        font-family: Arial, Helvetica;
+        background-image: none;
+    }
+
+    nav, .nav_links{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .pricing{
+        flex-wrap: nowrap;
+        align-items: flex-end;
+    }
+
+    .card{
+        border: 2px solid #45ADDD;
+        flex-basis: 325px;
+    }
+
+    #gallery, .gallery{
+        display: none;
+    }
+
+    main li:nth-child(2):after {
+        content: ' \1F44D';
+    }
+}
