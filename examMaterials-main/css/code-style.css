@@ -1,0 +1,53 @@
+/* Style for header and footer */
+header, footer {
+    background-color: #cad1d8;
+    font-size: 35px;
+}
+
+/* Style for all list items to display inline with a border */
+li {
+    display: inline;
+    border: 1px solid black;
+}
+
+/* Additional style for list items in the footer */
+footer li {
+    margin-left: 100px; /* Assuming the 100px margin is on the right side */
+}
+
+/* Style for all divs */
+div {
+    width: 19%;
+    text-align: center;
+    border: 2px solid black;
+    margin: 0 auto;
+    display: inline-block;
+    box-sizing: border-box; /* This makes my page matches the given example */
+}
+
+/* Hover effect for all divs */
+div:hover {
+    border: 20px solid blue;
+}
+
+/* Style for .special class */
+.special {
+    font-family: Cursive, 'Comic Sans MS', sans-serif; /* Cursive is not a specific font, hence providing a fallback */
+    text-transform: uppercase;
+}
+
+/* Style for 2nd, 4th, 6th, and 8th divs */
+div:nth-of-type(2),
+div:nth-of-type(4),
+div:nth-of-type(6),
+div:nth-of-type(8) {
+    border: 10px dashed green;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Style for the last div */
+div:last-of-type {
+    font-family: sans-serif; /* Reverting to default font */
+    background-color: yellow;
+}

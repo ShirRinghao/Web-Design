@@ -1,0 +1,59 @@
+.jumper{
+    position: absolute;
+    left: -1000px;
+}
+
+.jumper:focus{
+    left: 1%;
+}
+
+.holder{
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    border: solid #e91e63 3px;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+
+.holder p{
+    border: solid #708090 3px;
+    background-color: gray;
+    border-radius: 50%;
+    padding: 45px 20px;
+    text-align: center;
+}
+
+.holder p:last-child{
+    grid-column: 1 / 4;
+    border-radius: 0px;
+}
+
+div p{
+    background-color: rgb(186, 186, 186);
+    padding: 4%;
+    text-align: center;
+    margin-top: 2%;
+}
+
+    
+@media screen and (min-width:800px){
+    .first{
+        display: grid;
+        grid-template-columns: 40% 40%;
+    }
+
+    .first p{
+        border: solid #000045 2px;
+        border-radius: 0px;
+    }
+
+    .first p:nth-child(3n+3){
+        grid-column: 1/3;
+    }
+
+    .first p:last-child{
+        display: none;
+    }
+        
+}
+    
